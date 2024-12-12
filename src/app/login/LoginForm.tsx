@@ -12,8 +12,9 @@ import { useRouter } from 'next/navigation';
 import { useApi, useMessages } from 'components/hooks';
 import { setUser } from 'store/app';
 import { setClientAuthToken } from 'lib/client';
-import Logo from 'assets/logo.svg';
+import Logo from '../../assets/NEUlogo.png';
 import styles from './LoginForm.module.css';
+import Image from 'next/image';
 
 export function LoginForm() {
   const { formatMessage, labels, getMessage } = useMessages();
@@ -37,9 +38,9 @@ export function LoginForm() {
   return (
     <div className={styles.login}>
       <Icon className={styles.icon} size="xl">
-        <Logo />
+        <Image src={Logo} alt="NEU Analytics Logo" width={100} height={100} />
       </Icon>
-      <div className={styles.title}>umami</div>
+      <div className={styles.title}>NEU Analytics</div>
       <Form className={styles.form} onSubmit={handleSubmit} error={getMessage(error)}>
         <FormRow label={formatMessage(labels.username)}>
           <FormInput

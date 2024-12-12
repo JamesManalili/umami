@@ -1,5 +1,5 @@
 'use client';
-import { Icon, Text } from 'react-basics';
+import { Text } from 'react-basics';
 import Link from 'next/link';
 import classNames from 'classnames';
 import HamburgerButton from 'components/common/HamburgerButton';
@@ -7,11 +7,12 @@ import ThemeButton from 'components/input/ThemeButton';
 import LanguageButton from 'components/input/LanguageButton';
 import ProfileButton from 'components/input/ProfileButton';
 import TeamsButton from 'components/input/TeamsButton';
-import Icons from 'components/icons';
 import { useMessages, useNavigation, useTeamUrl } from 'components/hooks';
 import styles from './NavBar.module.css';
 import { useEffect } from 'react';
 import { getItem, setItem } from 'next-basics';
+import Logo from '../../assets/NEUlogo.png';
+import Image from 'next/image';
 
 export function NavBar() {
   const { formatMessage, labels } = useMessages();
@@ -99,9 +100,8 @@ export function NavBar() {
   return (
     <div className={styles.navbar}>
       <div className={styles.logo}>
-        <Icon size="lg">
-          <Icons.Logo />
-        </Icon>
+        {/* Updated to use next/image */}
+        <Image src={Logo} alt="NEU Analytics Logo" width={40} height={40} />
         <Text>NEU Analytics</Text>
       </div>
       <div className={styles.links}>
