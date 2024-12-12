@@ -38,7 +38,7 @@ export function LoginForm() {
   return (
     <div className={styles.login}>
       <Icon className={styles.icon} size="xl">
-        <Image src={Logo} alt="NEU Analytics Logo" width={100} height={60} />
+        <Image src={Logo} alt="NEU Analytics Logo" width={100} height={75} />
       </Icon>
       <div className={styles.title}>NEU Analytics</div>
       <Form className={styles.form} onSubmit={handleSubmit} error={getMessage(error)}>
