@@ -101,7 +101,7 @@ export function NavBar() {
     <div className={styles.navbar}>
       <div className={styles.logo}>
         {/* Updated to use next/image */}
-        <Image src={Logo} alt="NEU Analytics Logo" width={40} height={30} />
+        <Image src={Logo} alt="NEU Analytics Logo" width={40} height={35} />
         <Text>NEU Analytics</Text>
       </div>
       <div className={styles.links}>
